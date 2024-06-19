@@ -12,8 +12,10 @@ def html_add(html_content, name, date, link):
     new_value_name.string = name
     new_value_date = soup.new_tag('div', **{'class': 'value'})
     new_value_date.string = date
+    new_a_tag = soup.new_tag('a', href=link)
+    new_a_tag.string = 'Click here'
     new_value_link = soup.new_tag('div', **{'class': 'value'})
-    new_value_link.string = link
+    new_value_link.append(new_a_tag)
 
     new_item.append(new_value_name)
     new_item.append(new_value_date)
