@@ -30,6 +30,7 @@ def gen_abstract(abstract):
 
 # %%
 def gen_abstract_item(index,ulist):
+    t, n, a, item = '', '', '', ''
     try:
         t = gen_title(index,str(ulist[0]))
         n = gen_name(str(ulist[1]))
