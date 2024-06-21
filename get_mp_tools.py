@@ -7,9 +7,11 @@ import add_current
 def get_requests_data(url):
     requests_data = requests.get(url)
     soup_data = BeautifulSoup(requests_data.text, 'html.parser')
+    return soup_data
 
 def get(url):
     try:
-        get_requests_data(url)
+        data = get_requests_data(url)
+        return data
     except:
         add_current.add_error(url)
