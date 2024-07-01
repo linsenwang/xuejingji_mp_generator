@@ -7,12 +7,13 @@ import urllib
 import random
 import json
 import time
+import os
 
 
 def trans(query):
 
     appid = '20240616002078269'  # 填写你的appid
-    secretKey = '2_EY18n8uT6GrN3RBSDG'  # 填写你的密钥
+    secretKey = os.environ['BDAPIKEY']  # 填写你的密钥
 
     httpClient = None
     myurl = '/api/trans/vip/translate'
